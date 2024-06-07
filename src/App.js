@@ -8,6 +8,7 @@ import Sidebar from './components/Sidebar';
 import Ecommerce from './pages/Ecommerce';
 import { Route, Routes } from 'react-router-dom';
 import Calendar from './pages/Calender';
+import KanabanBoard from './pages/KanabanBoard';
 const App = () => {
   const { currentColor, activeMenu, themeSettings, setThemeSettings } = useStateContext()
   return (
@@ -53,10 +54,11 @@ const App = () => {
                 <Route path="/customers" element={<Customers />} /> */}
 
             {/* apps  */}
-            {/* <Route path="/kanban" element={<Kanban />} />
+            {/*
                 <Route path="/editor" element={<Editor />} />
                 <Route path="/color-picker" element={<ColorPicker />} /> */}
             <Route path="/calendar" element={<Calendar />} />
+            <Route path="/kanban" element={<KanabanBoard />} />
             {/* charts  */}
             {/* <Route path="/line" element={<Line />} />
                 <Route path="/area" element={<Area />} />
