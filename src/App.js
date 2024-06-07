@@ -7,6 +7,7 @@ import ThemeSettings from './components/ThemeSettings';
 import Sidebar from './components/Sidebar';
 import Ecommerce from './pages/Ecommerce';
 import { Route, Routes } from 'react-router-dom';
+import Calendar from './pages/Calender';
 const App = () => {
   const { currentColor, activeMenu, themeSettings, setThemeSettings } = useStateContext()
   return (
@@ -23,7 +24,7 @@ const App = () => {
         </Tooltip>
       </div>
       {
-        activeMenu ? (<div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white '>
+        activeMenu ? (<div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ' >
           <Sidebar />
         </div>) : (<div className='w-0 dark:bg-secondary-dark-bg'>
 
@@ -36,29 +37,28 @@ const App = () => {
             : 'bg-main-bg dark:bg-main-dark-bg  w-full min-h-screen flex-2 '
         }
       >
-        <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full flex justify-center'>
+        <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full flex justify-center z-50'>
           <Navbar />
         </div>
         <div>
           {themeSettings && (<ThemeSettings />)}
           <Routes>
-                {/* dashboard  */}
-                <Route path="/" element={(<Ecommerce />)} />
-                <Route path="/ecommerce" element={(<Ecommerce />)} />
+            {/* dashboard  */}
+            <Route path="/" element={(<Ecommerce />)} />
+            <Route path="/ecommerce" element={(<Ecommerce />)} />
 
-                {/* pages  */}
-                {/* <Route path="/orders" element={<Orders />} />
+            {/* pages  */}
+            {/* <Route path="/orders" element={<Orders />} />
                 <Route path="/employees" element={<Employees />} />
                 <Route path="/customers" element={<Customers />} /> */}
 
-                {/* apps  */}
-                {/* <Route path="/kanban" element={<Kanban />} />
+            {/* apps  */}
+            {/* <Route path="/kanban" element={<Kanban />} />
                 <Route path="/editor" element={<Editor />} />
-                <Route path="/calendar" element={<Calendar />} />
                 <Route path="/color-picker" element={<ColorPicker />} /> */}
-
-                {/* charts  */}
-                {/* <Route path="/line" element={<Line />} />
+            <Route path="/calendar" element={<Calendar />} />
+            {/* charts  */}
+            {/* <Route path="/line" element={<Line />} />
                 <Route path="/area" element={<Area />} />
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
@@ -67,7 +67,7 @@ const App = () => {
                 <Route path="/pyramid" element={<Pyramid />} />
                 <Route path="/stacked" element={<Stacked />} /> */}
 
-              </Routes>
+          </Routes>
 
         </div>
 

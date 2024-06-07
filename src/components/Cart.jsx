@@ -10,7 +10,7 @@ const Cart = () => {
     const { currentColor } = useStateContext();
 
     return (
-        <div className="bg-half-transparent w-full fixed nav-item top-0 right-0 ">
+        <div className="bg-half-transparent w-full fixed nav-item top-0 right-0 z-10">
             <div className="float-right h-screen  duration-1000 ease-in-out dark:text-gray-200 transition-all dark:bg-[#484B52] bg-white md:w-400 p-8 overflow-y-auto">
                 <div className="flex justify-between items-center">
                     <p className="font-semibold text-lg">Shopping Cart</p>
