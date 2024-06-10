@@ -9,6 +9,7 @@ import Ecommerce from './pages/Ecommerce';
 import { Route, Routes } from 'react-router-dom';
 import Calendar from './pages/Calender';
 import KanabanBoard from './pages/KanabanBoard';
+import LineChart from './pages/charts/LineChart';
 const App = () => {
   const { currentColor, activeMenu, themeSettings, setThemeSettings } = useStateContext()
   return (
@@ -60,7 +61,8 @@ const App = () => {
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/kanban" element={<KanabanBoard />} />
             {/* charts  */}
-            {/* <Route path="/line" element={<Line />} />
+            <Route path="/line" element={<LineChart/>} />
+            {/* 
                 <Route path="/area" element={<Area />} />
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
