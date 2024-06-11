@@ -13,6 +13,8 @@ import LineChartPage from './pages/charts/LineChart';
 import AreaChart from './pages/charts/AreaChart';
 import BarChartPage from './pages/charts/BarChartPage';
 import PieChartPage from './pages/charts/PieCahartPage';
+import ColorPicker from './pages/ColorPicker';
+import TextEditor from './pages/TextEditor';
 const App = () => {
   const { currentColor, activeMenu, themeSettings, setThemeSettings } = useStateContext()
   return (
@@ -58,16 +60,14 @@ const App = () => {
                 <Route path="/customers" element={<Customers />} /> */}
 
             {/* apps  */}
-            {/*
-                <Route path="/editor" element={<Editor />} />
-                <Route path="/color-picker" element={<ColorPicker />} /> */}
+                <Route path="/editor" element={<TextEditor />} />
+            <Route path="/color-picker" element={<ColorPicker />} />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/kanban" element={<KanabanBoard />} />
             {/* charts  */}
-            <Route path="/line" element={<LineChartPage/>} />
-            <Route path="/area" element={<AreaChart/>} />
+            <Route path="/line" element={<LineChartPage />} />
+            <Route path="/area" element={<AreaChart />} />
             <Route path="/bar" element={<BarChartPage />} />
-               
             <Route path="/pie" element={<PieChartPage />} />
             {/* 
                 
