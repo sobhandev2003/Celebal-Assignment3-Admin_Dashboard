@@ -17,13 +17,16 @@ export default function StackedBarChart({color}) {
   return (
     <BarChart
     
-      width={400}
+      width={300}
       height={300}
       series={[
         { data: pData, label: 'Expense', id: 'Expense', stack: 'total',  color:`${color}`},
         { data: uData, label: 'Budget', id: 'Budget', stack: 'total', color:"gray"},
-      ]}
+      ]
+      
+    }
       xAxis={[{ data: xLabels, scaleType: 'band' }]}
+      
     />
   );
 }

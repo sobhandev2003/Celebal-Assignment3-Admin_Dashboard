@@ -9,7 +9,10 @@ import Ecommerce from './pages/Ecommerce';
 import { Route, Routes } from 'react-router-dom';
 import Calendar from './pages/Calender';
 import KanabanBoard from './pages/KanabanBoard';
-import LineChart from './pages/charts/LineChart';
+import LineChartPage from './pages/charts/LineChart';
+import AreaChart from './pages/charts/AreaChart';
+import BarChartPage from './pages/charts/BarChartPage';
+import PieChartPage from './pages/charts/PieCahartPage';
 const App = () => {
   const { currentColor, activeMenu, themeSettings, setThemeSettings } = useStateContext()
   return (
@@ -26,7 +29,7 @@ const App = () => {
         </Tooltip>
       </div>
       {
-        activeMenu ? (<div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ' >
+        activeMenu ? (<div className='w-72 fixed sidebar dark:bg-secondary-dark-bg z-10' >
           <Sidebar />
         </div>) : (<div className='w-0 dark:bg-secondary-dark-bg'>
 
@@ -61,11 +64,14 @@ const App = () => {
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/kanban" element={<KanabanBoard />} />
             {/* charts  */}
-            <Route path="/line" element={<LineChart/>} />
+            <Route path="/line" element={<LineChartPage/>} />
+            <Route path="/area" element={<AreaChart/>} />
+            <Route path="/bar" element={<BarChartPage />} />
+               
+            <Route path="/pie" element={<PieChartPage />} />
             {/* 
-                <Route path="/area" element={<Area />} />
-                <Route path="/bar" element={<Bar />} />
-                <Route path="/pie" element={<Pie />} />
+                
+            
                 <Route path="/financial" element={<Financial />} />
                 <Route path="/color-mapping" element={<ColorMapping />} />
                 <Route path="/pyramid" element={<Pyramid />} />
