@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Admin Dashboard
+- This project is built using React.js, MUI, and various npm packages
+  ### Snapshot
+  ![dashbordGif](https://github.com/sobhandev2003/Celebal-Assignment3-Admin_Dashboard/assets/129223188/8e37e424-9df2-429f-8832-e0ffef90105d)
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
